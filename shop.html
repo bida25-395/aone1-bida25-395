@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0d631b",
+                        "surface-container": "#f7ebe7",
+                        "background": "#fff8f6",
+                        "surface-tint": "#1b6d24",
+                        "on-tertiary-container": "#ffeee8",
+                        "outline": "#707a6c",
+                        "tertiary": "#6b4f45",
+                        "secondary-container": "#acf4a4",
+                        "surface-container-high": "#f1e6e2",
+                        "on-primary-container": "#cbffc2",
+                        "surface-container-low": "#fdf1ed",
+                        "surface": "#fff8f6",
+                        "primary-fixed-dim": "#88d982",
+                        "primary-container": "#2e7d32",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#2b160f",
+                        "on-surface-variant": "#40493d",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#0c5216",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff8f6",
+                        "on-secondary-fixed": "#002203",
+                        "on-primary-fixed": "#002204",
+                        "inverse-surface": "#352f2d",
+                        "primary-fixed": "#a3f69c",
+                        "on-surface": "#201a18",
+                        "on-primary-fixed-variant": "#005312",
+                        "secondary-fixed-dim": "#91d78a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#faeeea",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "tertiary-fixed": "#ffdbce",
+                        "tertiary-container": "#85675c",
+                        "outline-variant": "#bfcaba",
+                        "surface-container-highest": "#ece0dc",
+                        "inverse-primary": "#88d982",
+                        "surface-variant": "#ece0dc",
+                        "secondary": "#2a6b2c",
+                        "secondary-fixed": "#acf4a4",
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#307231",
+                        "surface-dim": "#e3d8d4",
+                        "on-background": "#201a18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "md": "24px",
+                        "margin-mobile": "20px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "margin-desktop": "auto",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-bold": ["Work Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "label-sm": ["Work Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Work Sans"],
+                        "h2": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            shadow-color: rgba(141, 110, 99, 0.12);
+            box-shadow: 0 10px 30px -5px rgba(141, 110, 99, 0.12);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-stone-100 dark:border-zinc-800 shadow-sm dark:shadow-none">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="agriculture">agriculture</span>
+<h1 class="text-xl font-extrabold tracking-tight text-green-800 dark:text-green-400 font-['Plus_Jakarta_Sans']">Mercy Door Farms</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans']">
+<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all font-body-md" href="#">Home</a>
+<a class="text-green-700 dark:text-green-400 font-bold border-b-2 border-green-700 dark:border-green-400 pb-1 font-body-md" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all font-body-md" href="#">About Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all font-body-md" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-50 dark:hover:bg-zinc-900 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-12">
+<!-- Hero / Header Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-surface-container-high pb-8">
+<div>
+<span class="font-label-bold text-primary tracking-widest uppercase mb-2 block">Our Harvest</span>
+<h2 class="font-h1 text-h1 text-on-surface">Fresh From The Soil</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mt-4">Discover the seasonal bounty of Mercy Door Farms. Sustainably grown with Kagiso and Botho at the heart of every harvest.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-tertiary font-label-bold">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                        Filter
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full text-tertiary font-label-bold">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+                        Sort
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Product Card: Green Bell Peppers -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden soft-shadow transition-transform duration-300 hover:-translate-y-2">
+<div class="relative h-72 overflow-hidden">
+<img alt="Green Bell Peppers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close-up of vibrant crisp green bell peppers in a rustic wooden crate with soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf9IIaxoxReTMW4xd_UIQtsSgCVK5POYj5hfsVg4WL99Mn5bioM6G_YAdITSYb-I5flKkTX0roEbpoRvgzLYQCqdvD1BFRjfNLO5QdJX5y2y_vrDQnV9JTYwywqfBWfCQs4gWs_9QGFYw8CElgFW3BJQsh50fmJLrikVXbSQujU1j4LjsRKoFOcQYfBjOap2dNMmxOXKY74xXZE6a_tEFSsPPS8iHvFfV9ZpVORLGDNvNlpnAdQOqJObdX7OJCEV2D0wfYKi3nf4w"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white px-3 py-1 rounded-full text-label-sm font-semibold">New Harvest</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-surface">Green Bell Peppers</h3>
+<span class="font-h3 text-primary">P 15.00/kg</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Crisp, farm-fresh green bell peppers, perfect for salads, stir-fries, and stuffing.</p>
+<div class="mt-auto flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-lg p-1">
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="px-4 font-label-bold text-on-surface">1</span>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<button class="flex-grow bg-primary text-white py-3 px-6 rounded-lg font-label-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_basket">shopping_basket</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card: Butternut Squash -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden soft-shadow transition-transform duration-300 hover:-translate-y-2">
+<div class="relative h-72 overflow-hidden">
+<img alt="Butternut Squash" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="large organic butternut squash on a bed of hay in a sunlit barn setting with warm golden tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgJAwCC8IPbKC4_fgU6rO6nAmym-r8RciIL9Nz3CJnDmEqCMrnM9B6LCmJEKab05xQ2YR6z2A1c3pu382PpTu1FJNTHvMgB86PH2WcCB1dVAVyMiN1DHkPC9RNKjT0PfrhDHEgBM6sJksSQxV-_yFcFyuFcyh1nY6lRX7uiDjPIQjtJPk32re0y1nisQDAxB8YvRWJ0H40x_hxZD37NtDv9p1Zt1iB9Tbt7tHoJIjPKdFViAdYY0t6J0cckyYfHRgXuZLHLcTp58g"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary text-white px-3 py-1 rounded-full text-label-sm font-semibold">Limited Stock</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-surface">Butternut Squash</h3>
+<span class="font-h3 text-primary">P 12.00/pc</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Sweet and nutty winter squash with a smooth, tan skin. Ideal for roasting or soups.</p>
+<div class="mt-auto flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-lg p-1">
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="px-4 font-label-bold text-on-surface">1</span>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<button class="flex-grow bg-primary text-white py-3 px-6 rounded-lg font-label-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_basket">shopping_basket</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card: Tomatoes -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden soft-shadow transition-transform duration-300 hover:-translate-y-2">
+<div class="relative h-72 overflow-hidden">
+<img alt="Tomatoes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="plump vine-ripened red tomatoes still attached to the green stem with water droplets on a dark wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALk9B2kppNXW7thbG3iErQgm12Y2PYaV1GAKxa2ydY1GAN2KhZNf0PSF0BTW4zIq_isgqjjhASNTCy5YnI6-1gG4_Q2Qw0gTi32B1hyCQ9z_nMBGttVL9yf-V2nWGYUX8iiqtesQTCmY7IfY-LXYLoA95FC6ZSQ7L2wBdMYISsC2uqdf0Mfk7Cuohokfuj-cZkGecSYNHTvGxSaJgYG50NVylDZyThcD9Bxryw802D1KGg7jtE092Hx8geRALyp1mZSNhF4zHSZPo"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white px-3 py-1 rounded-full text-label-sm font-semibold">Best Seller</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-surface">Tomatoes</h3>
+<span class="font-h3 text-primary">P 18.00/kg</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Juicy, sun-ripened tomatoes bursting with flavor. Perfect for sauces and fresh salads.</p>
+<div class="mt-auto flex items-center justify-between gap-4">
+<div class="flex items-center bg-surface-container rounded-lg p-1">
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="px-4 font-label-bold text-on-surface">1</span>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-white rounded-md transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<button class="flex-grow bg-primary text-white py-3 px-6 rounded-lg font-label-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_basket">shopping_basket</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="mt-32 p-12 bg-surface-container rounded-3xl overflow-hidden relative">
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">Join our Farm Circle</h2>
+<p class="font-body-lg text-tertiary-container mb-8">Receive weekly harvest updates, seasonal recipes, and special community offers directly from the farm.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-white border border-outline-variant rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white font-label-bold px-8 py-4 rounded-xl hover:bg-primary-container transition-all">Subscribe Now</button>
+</div>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 hidden lg:block">
+<img alt="Farm landscape" class="w-full h-full object-cover opacity-20" data-alt="wide landscape of rolling green hills and vegetable fields under a bright clear blue sky with a traditional farmhouse in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqAMK1PDEaXpauPOLN_4MwEhQf5XdL84NhKjkCMuNK7YQLISaW6IX8vAPiOMTPUT9-t7H5Qu6YAATzQ9cBb7AkUhaoENnEuzhXd0bS8x_N6_bdzwmZsIN6kdbzK-wSz5wnI9VQLZf73kVUnR0bOj8-8gRQHdbz7W_D5HrGfGJF3Amj6_rt8I-4mkWArGK03Au4ezhVZrKOqiiKbO9-8ZTbM2dPObY1tJhGOaYxK0TuFZrNKn6QDkXGfBFoH3xthLBvC7FCubswThc"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-50 dark:bg-zinc-900 border-t border-stone-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h3 class="text-lg font-bold text-green-800 dark:text-green-500 font-['Plus_Jakarta_Sans']">Mercy Door Farms</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-stone-500 dark:text-stone-400">© 2024 Mercy Door Farms. Rooted in Botho &amp; Kagiso.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 underline decoration-green-700 underline-offset-4" href="#">Home</a>
+<a class="text-green-700 dark:text-green-400 font-medium underline decoration-green-700 underline-offset-4" href="#">Shop</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 underline decoration-green-700 underline-offset-4" href="#">About Us</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 underline decoration-green-700 underline-offset-4" href="#">Contact</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 underline decoration-green-700 underline-offset-4" href="#">Privacy Policy</a>
+</nav>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

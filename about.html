@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Mercy Door Farms</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f6;
+        }
+    </style>
+<!-- Shared Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#0d631b",
+                      "surface-container": "#f7ebe7",
+                      "background": "#fff8f6",
+                      "surface-tint": "#1b6d24",
+                      "on-tertiary-container": "#ffeee8",
+                      "outline": "#707a6c",
+                      "tertiary": "#6b4f45",
+                      "secondary-container": "#acf4a4",
+                      "surface-container-high": "#f1e6e2",
+                      "on-primary-container": "#cbffc2",
+                      "surface-container-low": "#fdf1ed",
+                      "surface": "#fff8f6",
+                      "primary-fixed-dim": "#88d982",
+                      "primary-container": "#2e7d32",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#2b160f",
+                      "on-surface-variant": "#40493d",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#0c5216",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#fff8f6",
+                      "on-secondary-fixed": "#002203",
+                      "on-primary-fixed": "#002204",
+                      "inverse-surface": "#352f2d",
+                      "primary-fixed": "#a3f69c",
+                      "on-surface": "#201a18",
+                      "on-primary-fixed-variant": "#005312",
+                      "secondary-fixed-dim": "#91d78a",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#faeeea",
+                      "on-tertiary-fixed-variant": "#5b4137",
+                      "tertiary-fixed": "#ffdbce",
+                      "tertiary-container": "#85675c",
+                      "outline-variant": "#bfcaba",
+                      "surface-container-highest": "#ece0dc",
+                      "inverse-primary": "#88d982",
+                      "surface-variant": "#ece0dc",
+                      "secondary": "#2a6b2c",
+                      "secondary-fixed": "#acf4a4",
+                      "tertiary-fixed-dim": "#e4beb2",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#307231",
+                      "surface-dim": "#e3d8d4",
+                      "on-background": "#201a18"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "gutter": "16px",
+                      "base": "8px",
+                      "md": "24px",
+                      "margin-mobile": "20px",
+                      "lg": "48px",
+                      "xl": "80px",
+                      "margin-desktop": "auto",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Work Sans"],
+                      "label-bold": ["Work Sans"],
+                      "h3": ["Plus Jakarta Sans"],
+                      "label-sm": ["Work Sans"],
+                      "h1": ["Plus Jakarta Sans"],
+                      "body-md": ["Work Sans"],
+                      "h2": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface bg-background antialiased">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-700" data-icon="agriculture">agriculture</span>
+<span class="text-xl font-extrabold tracking-tight text-green-800 font-h3">Mercy Door Farms</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="#">Home</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="#">Shop</a>
+<a class="text-green-700 font-bold border-b-2 border-green-700 pb-1 font-body-md" href="#">About Us</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-50 rounded-lg transition-colors text-stone-600">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden p-2 text-stone-600">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full py-xl px-margin-mobile overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="z-10 order-2 lg:order-1">
+<span class="inline-block bg-surface-container text-primary font-label-bold px-4 py-1 rounded-full mb-gutter">Our Heritage</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-gutter leading-tight">Rooted in Botho, Flourishing in Kagiso</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-md">
+                        Mercy Door Farms was started by a determined Motswana woman who began with just a small patch of land and a big dream to nourish her community.
+                    </p>
+<div class="flex gap-gutter">
+<button class="bg-primary-container text-white px-8 py-3 rounded-lg font-label-bold shadow-md hover:opacity-90 transition-all">Explore Our Harvest</button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 h-[400px] lg:h-[600px]">
+<div class="absolute inset-0 bg-surface-container rounded-[40px] transform rotate-3"></div>
+<img alt="Founder at Farm" class="absolute inset-0 w-full h-full object-cover rounded-[40px] shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="A portrait of a determined Motswana woman in a wide-brimmed hat smiling in a lush vegetable field during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRg61OxbFra_gQr1jM8vt7p0HNkaxnzARZf67c8YbWDkPAMlBhpFNULWTnvRb45QU6bSZR1vcNdiGKTbN5OljXF9SdG5d_shAbX9EUFjNLuDgUJo7eGC4VMbIbr262bk-5nZKD00SZuqeBzF3UuKsp3cKWuAuWq0PHLQ5IiCEU3mOMoSlyioAuLUZSWKQodsLCz5WYHp7M99bGqqIYKbW3F9DVDKHNS4th_JEeJUd3skyAMuYydyIhVRna1jr9O0xQSpu9OQWplII"/>
+</div>
+</div>
+</section>
+<!-- The Story Bento Grid -->
+<section class="py-xl bg-surface-container-low px-margin-mobile">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">A Journey of Growth</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">From a single seed to a thriving ecosystem, our story is woven with the values of humanity and peace.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[240px]">
+<!-- Bento Item 1: The Start -->
+<div class="md:col-span-8 bg-white p-lg rounded-3xl shadow-sm flex flex-col justify-end relative overflow-hidden group">
+<img alt="Dry Land" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a single green sprout emerging from rich brown soil with warm sunlight filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5oGmadwIXljpzAWtzMxZezAkJMb-sT4bFCK8gUp8vReQtspuLVyewPm9URtpKdzRo3JZNFI24Xvg9cVMJQNg6mb6hK9GO4MGZfKTLjkg7CLfx0NCqBfACJm_KUYnuCx4Ftwvbk23TPHqll8y2LgwFJnfxX-tR4Y1znrmOxI4mo3scthYGOCIWsSuS_gG5GuVsMcXJWLr4vwoXf5eAV4-rAgn6h-CM_y0xPBtdWgpDILeV9wqPqOPEBzsiGkSzQNveCpeVZAv8sLc"/>
+<div class="relative z-10">
+<h3 class="font-h3 text-h3 text-primary mb-2">The Humble Beginning</h3>
+<p class="font-body-md text-on-surface-variant">It wasn't about the size of the plot, but the depth of the commitment to Botho—treating every seed with respect.</p>
+</div>
+</div>
+<!-- Bento Item 2: Kagiso -->
+<div class="md:col-span-4 bg-tertiary-container p-lg rounded-3xl text-on-tertiary-container flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl mb-4" data-icon="psychology_alt">psychology_alt</span>
+<h3 class="font-h3 text-h3 mb-2">Kagiso</h3>
+<p class="font-label-bold opacity-90">Finding peace in the rhythm of the seasons.</p>
+</div>
+<!-- Bento Item 3: Community -->
+<div class="md:col-span-4 bg-white p-lg rounded-3xl shadow-sm border border-surface-container-high relative overflow-hidden">
+<div class="h-full flex flex-col justify-between">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h3 class="font-label-bold text-lg mb-1">Community First</h3>
+<p class="text-sm text-on-surface-variant">Shared prosperity through mutual respect and collective effort.</p>
+</div>
+</div>
+</div>
+<!-- Bento Item 4: Modern Methods -->
+<div class="md:col-span-8 bg-white rounded-3xl shadow-sm relative overflow-hidden group">
+<img alt="Farming Tech" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Modern sustainable irrigation system in a rows of organic green vegetables under a bright clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWadaH0QhZ00SEFTyeGLci3m3FB-V2Xgy1vg30VQ4ExflRclaBCv7IRsXHOtLe9RZKWvBdHwLuEM67uWewZWPn0yHWi3oF-QPBJDKRJIbw3t6MgucHA7r8AOj1xc4eTsoHykQZ7m5U8YcF3AUXYUsEEamGiKjCzwJ8IAN6vh-02O_YAqYqDeCnHbNFdqphWb0sqnEUxu-ll1iyOo3JXhrRrPG3j62_QJHMEcFjZCw408eMteL1nw63PLb3FhLmlOTux---dz-M2Zs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg">
+<h3 class="font-h3 text-h3 text-white">Innovation with Integrity</h3>
+<p class="text-white/80 font-body-md">Blending traditional wisdom with sustainable modern agriculture.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-xl px-margin-mobile">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<div class="md:w-1/2">
+<h2 class="font-h2 text-h2 text-on-surface mb-gutter">The Pillars of Mercy Door</h2>
+<div class="space-y-md">
+<div class="flex gap-gutter">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg text-primary">Nurtured Growth</h4>
+<p class="text-on-surface-variant">We don't just grow food; we cultivate life. Every harvest is a testament to our patience and care.</p>
+</div>
+</div>
+<div class="flex gap-gutter">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg text-primary">Unwavering Trust</h4>
+<p class="text-on-surface-variant">Transparency in how we farm and honesty in how we trade is the cornerstone of our community promise.</p>
+</div>
+</div>
+<div class="flex gap-gutter">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<div>
+<h4 class="font-label-bold text-lg text-primary">Ecological Balance</h4>
+<p class="text-on-surface-variant">Respecting the Botswana landscape by implementing regenerative practices that give back to the earth.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-gutter">
+<img alt="Greenery" class="w-full h-64 object-cover rounded-2xl shadow-md" data-alt="Sun-drenched close-up of fresh green kale leaves with water droplets in an organic farm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1nNywucqyw6UZi_CkKF2GzUkdfu88GAK8HrzRYKcOTv1xPLSeMnvKlnrhtfgw0RBVmp8jsbh6Ufj62e8el8nVbrbLaqv0ofLLI0BqgQnQIz-5ukM8xFQ1sVJOHhLs_R6Lk-GpIWXQSB-6zkR-Twb_J6vkXH0hGy6jr1Y7qtVOtRAoGHFVt9f3NJx_14HvqYnsz0Vgd1_ycXC1J-qJpBKyfRUiLN8T1hV2EXTXykR9mXnRezIQESATTJRZM3uQiNNyqUEnf3uBh6c"/>
+<img alt="Harvest" class="w-full h-64 object-cover rounded-2xl shadow-md mt-lg" data-alt="A wooden crate overflowing with colorful harvested vegetables like peppers, tomatoes and onions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_8zJCfxOTVcu8vS4IfU_avhP03O1NAxoENRQYSBIBGdAAL-1Q0ynfdy94aohqhsayvzW_rSrP5DlgH0zmGgpbVTztBgeNkMvVmaHkpNaGDp397dbh0F24uke_d1SC55nd6fXYmZ6mkWDx_5SV7P9zKU1s_I7ZNqDHrQ5CSrcDDXb88cHrQDLjplR9shteMqrFpNH0zCNfBk7E6-cru4-AZQs4apyjoDZX6z9OvrpSpbAnPf7h2fLgthZJbrvJHE9alw_rDTGuwTw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-xl px-margin-mobile">
+<div class="max-w-5xl mx-auto bg-primary-container rounded-[40px] p-lg md:p-xl text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<div class="relative z-10">
+<h2 class="font-h2 text-h2 text-white mb-gutter">Join Our Community Table</h2>
+<p class="font-body-lg text-on-primary-container mb-md max-w-2xl mx-auto">Experience the taste of produce grown with heart, respect, and a deep connection to the Botswana soil.</p>
+<div class="flex flex-col sm:flex-row gap-gutter justify-center">
+<button class="bg-white text-primary font-label-bold px-8 py-4 rounded-full shadow-lg hover:bg-surface-container transition-colors">Shop Fresh Harvest</button>
+<button class="bg-transparent border-2 border-white/50 text-white font-label-bold px-8 py-4 rounded-full hover:bg-white/10 transition-colors">Visit the Farm</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-50 border-t border-stone-200">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<span class="text-lg font-bold text-green-800 font-h3">Mercy Door Farms</span>
+<p class="mt-2 text-stone-500 font-body-md max-w-xs">Nurturing communities through fresh, sustainable, and respectful agriculture.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-stone-800 transition-colors font-body-md" href="#">Home</a>
+<a class="text-stone-500 hover:text-stone-800 transition-colors font-body-md" href="#">Shop</a>
+<a class="text-green-700 font-medium font-body-md underline decoration-green-700 underline-offset-4" href="#">About Us</a>
+<a class="text-stone-500 hover:text-stone-800 transition-colors font-body-md" href="#">Contact</a>
+<a class="text-stone-500 hover:text-stone-800 transition-colors font-body-md" href="#">Privacy Policy</a>
+</div>
+<div class="text-stone-500 text-sm font-body-md">
+                © 2024 Mercy Door Farms. Rooted in Botho &amp; Kagiso.
+            </div>
+</div>
+</footer>
+</body></html>

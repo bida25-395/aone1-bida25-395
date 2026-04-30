@@ -1,10 +1,326 @@
 <!DOCTYPE html>
 
-<html lang="en">
-    <head>
-
-    </head>
-    <body>
-        
-    </body>
-</html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#0d631b",
+                    "surface-container": "#f7ebe7",
+                    "background": "#fff8f6",
+                    "surface-tint": "#1b6d24",
+                    "on-tertiary-container": "#ffeee8",
+                    "outline": "#707a6c",
+                    "tertiary": "#6b4f45",
+                    "secondary-container": "#acf4a4",
+                    "surface-container-high": "#f1e6e2",
+                    "on-primary-container": "#cbffc2",
+                    "surface-container-low": "#fdf1ed",
+                    "surface": "#fff8f6",
+                    "primary-fixed-dim": "#88d982",
+                    "primary-container": "#2e7d32",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#2b160f",
+                    "on-surface-variant": "#40493d",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#0c5216",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff8f6",
+                    "on-secondary-fixed": "#002203",
+                    "on-primary-fixed": "#002204",
+                    "inverse-surface": "#352f2d",
+                    "primary-fixed": "#a3f69c",
+                    "on-surface": "#201a18",
+                    "on-primary-fixed-variant": "#005312",
+                    "secondary-fixed-dim": "#91d78a",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#faeeea",
+                    "on-tertiary-fixed-variant": "#5b4137",
+                    "tertiary-fixed": "#ffdbce",
+                    "tertiary-container": "#85675c",
+                    "outline-variant": "#bfcaba",
+                    "surface-container-highest": "#ece0dc",
+                    "inverse-primary": "#88d982",
+                    "surface-variant": "#ece0dc",
+                    "secondary": "#2a6b2c",
+                    "secondary-fixed": "#acf4a4",
+                    "tertiary-fixed-dim": "#e4beb2",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#307231",
+                    "surface-dim": "#e3d8d4",
+                    "on-background": "#201a18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "gutter": "16px",
+                    "base": "8px",
+                    "md": "24px",
+                    "margin-mobile": "20px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "margin-desktop": "auto",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Work Sans"],
+                    "label-bold": ["Work Sans"],
+                    "h3": ["Plus Jakarta Sans"],
+                    "label-sm": ["Work Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "body-md": ["Work Sans"],
+                    "h2": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm font-['Plus_Jakarta_Sans'] antialiased">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-700 text-2xl">agriculture</span>
+<span class="text-xl font-extrabold tracking-tight text-green-800">Mercy Door Farms</span>
+</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-green-700 font-bold border-b-2 border-green-700 pb-1" href="#">Home</a>
+<a class="text-stone-600 hover:text-green-700 transition-all" href="#">Shop</a>
+<a class="text-stone-600 hover:text-green-700 transition-all" href="#">About Us</a>
+<a class="text-stone-600 hover:text-green-700 transition-all" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-50 rounded-lg transition-colors text-stone-600">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-stone-50 rounded-lg transition-colors text-green-700 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="md:hidden p-2 hover:bg-stone-50 rounded-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Full-Width Hero Banner -->
+<section class="relative h-[751px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Fresh farm produce" class="w-full h-full object-cover" data-alt="Stunning cinematic wide shot of vibrant green farmland at sunrise, foreground featuring baskets of dew-kissed fresh organic vegetables, soft golden hour lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbLIrpXQ_AMUrK8wNmHatEXjIDOizx3vplzDBo-CAlKvGtcv3Ec0YS1c3aJy_7SxVwZQb0uUr85Gqr4-6c-n02Rtp-SvNl5xoqGnvBZgDfuiTTxMTqfy9hxh8aeL98F2OoOHtxHT8kc4054vVt1968KrFakDeDTbCfezuKisSkS11LUoVofSsvxkYTCsY46GpcUYQgYCTzbo3rBqve1DaxY-oLZJWfb2rxLMwGdZatT7jhV2CVNKo4uGFA_6vvcDFHKYA7cEnr7Yc"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-start">
+<span class="bg-primary-container/20 backdrop-blur-sm text-on-primary-fixed-variant px-4 py-1.5 rounded-full font-label-bold mb-6">
+                    Fresh Harvest 2024
+                </span>
+<h1 class="font-h1 text-h1 text-white max-w-2xl mb-6">
+                    Fresh from our land to your table — Proudly local, grown with Botho.
+                </h1>
+<p class="text-white/90 text-body-lg max-w-xl mb-10">
+                    Experience the taste of Botswana's finest agriculture. Hand-picked, nutrient-rich, and delivered with peace and humanity.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-xl font-label-bold transition-all shadow-lg active:scale-95">
+                        Shop Fresh Produce
+                    </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-label-bold transition-all">
+                        Our Story
+                    </button>
+</div>
+</div>
+</section>
+<!-- Seasonal Highlights - Bento Grid -->
+<section class="max-w-7xl mx-auto px-6 py-xl">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Seasonal Highlights</h2>
+<p class="text-on-surface-variant text-body-md">The very best of this month's harvest, picked at peak ripeness.</p>
+</div>
+<button class="text-primary font-label-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    View All <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl overflow-hidden group cursor-pointer relative shadow-sm">
+<div class="aspect-[16/9] overflow-hidden">
+<img alt="Fresh heirloom tomatoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Lush heirloom tomatoes of varying colors and sizes, rustic wooden crate background, warm natural sunlight highlighting textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2mQNiBC-iLIANsq23fHYGqlBL8PnJwOMZVhQgbXSZFehkJdHcNJuFgvLhulpg6RqhGO-UbgT2UUSQTRpeEzPT4Eu0o2Hyp5lJBolMCN40ZgVU_K8dkx_jz7NEH1eGqDxZg3HgsYQHoNyF-EKxTte17YGTr3wAGTprnAyNZVQNcm5UXl3d8D0vg-XSIYMOJLq0jISLUEUED6xfjNDgP8LTXJTEiD2MVadUWYbNfr76iB29Dt4L0cJxcovQd-7Jn0m0bAcT9om5kzg"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg text-label-sm">Bestseller</span>
+<span class="text-primary font-bold text-h3">P45.00 / kg</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Organic Heirloom Tomatoes</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Sun-ripened in our northern fields, bursting with flavor and rich in antioxidants.</p>
+<button class="bg-primary text-white px-6 py-3 rounded-lg font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined">add_shopping_cart</span> Add to Cart
+                        </button>
+</div>
+</div>
+<!-- Secondary Items -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface-container">
+<img alt="Fresh greens" class="w-full h-full object-cover" data-alt="Close-up of vibrant kale leaves with water droplets, bright studio lighting, professional food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDga--mO_DyOe3MnNfRV5o8orsB9yqPjLkfUV7z_w4f8dJHdbUM0BevaXm-AQhztihzz3QT6wnIRYowWQQR8v32o7rjQQLoyjJimePo0vTxIcTBzyDDv_jBZi1sKTFFTRMpEHbNdYQrVoWNZxv_mZ0mve306-PMNLIjVP-V0zsHiJISFffX5DoaJ75jxy-uALSXokoV5MzuYcWZWdW6dw1oHXzUglll1E8vq1VgGFjz3ZMVlzDyj52CLj-xPnAK5EFZy3yf6LQJ5SI"/>
+</div>
+<h4 class="font-h3 text-h3 mb-1">Crisp Baby Spinach</h4>
+<p class="text-on-surface-variant text-label-sm mb-4">Farm-to-Door in 24hrs</p>
+<span class="text-primary-container font-bold mb-4">P18.50 / pack</span>
+<button class="w-full border border-outline-variant hover:border-primary text-on-surface py-2 rounded-lg font-label-bold transition-colors">
+                            Quick Add
+                        </button>
+</div>
+<div class="bg-surface-container rounded-xl p-6 shadow-sm flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white">
+<img alt="Root vegetables" class="w-full h-full object-cover" data-alt="Earthy fresh carrots with green tops, rustic presentation on light neutral background, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGzEg9t6q1bUoHnzKpDeD5iKqCJxTJRQHN2hY4DNqu_G4BB_RUUFTOVSVHF9nusCpv0vuC3cptUPkEfPxMPp40gHTz52BSWOrqEaklFdBIs5el7pcKpjezKuokXPoFlRsniQ4Ij2ERj9mi58_ENsWxqdu7vdEGS8vb8aNRMvg4mrB2_VI5lov-Md3fTkGIEeOxVb3SQMjGimPkv6gzP8HVTpbZVhwIyNEMirxMU1IUXsXN9mdAeJokoGcC-nVEQw-hykxFTcxJ1hw"/>
+</div>
+<h4 class="font-h3 text-h3 mb-1">Golden Sweet Carrots</h4>
+<p class="text-on-surface-variant text-label-sm mb-4">Crunchy &amp; Sweet</p>
+<span class="text-primary-container font-bold mb-4">P12.00 / bunch</span>
+<button class="w-full border border-outline-variant hover:border-primary text-on-surface py-2 rounded-lg font-label-bold transition-colors">
+                            Quick Add
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section - Asymmetric Layout -->
+<section class="bg-surface-container-low py-xl overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Mercy Door Farm landscape" class="w-full h-[500px] object-cover" data-alt="Wide panoramic view of a modern African farm with rolling green fields, sustainable irrigation systems, and a soft hazy horizon at dusk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04davOCAngiQrzhBmAgm4vESnX4_Cf-ixqkMMhwnc0Tck6FW02K723hgwktzRdYsKpPoA2f-5kagx_OBMQfRYBfogVyeUZCv7XFKzrG5A1jd_-wwf1bs8UN8wV-yKHJEA6Sh-0JGfQkSr5m-CuTJ0YzbhuAr9PQ0HTwDc_oxuL3nfwekCFgwa4NotGDR3glLaIWEQgAk5NKZquzc0HjCoqDLfj6PkfVVd9aGHyd17kVYgMBFWJcfo2wJZnLNCOGweXl6WJPWAYb0"/>
+</div>
+<div class="absolute -bottom-6 -right-6 z-20 bg-white p-8 rounded-xl shadow-xl max-w-xs hidden lg:block">
+<div class="flex items-center gap-4 mb-4">
+<div class="bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<h5 class="font-label-bold">100% Certified Organic</h5>
+</div>
+<p class="text-on-surface-variant text-label-sm">We believe in farming that heals the earth as much as it nourishes our community.</p>
+</div>
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-3xl"></div>
+</div>
+<div class="md:w-1/2">
+<span class="text-tertiary-container font-label-bold tracking-widest uppercase mb-4 block">Rooted in Tradition</span>
+<h2 class="font-h2 text-h2 mb-6 leading-tight">Grown with Botho, Harvested for Kagiso.</h2>
+<div class="space-y-6 text-on-surface-variant text-body-lg">
+<p>
+                                At Mercy Door Farms, our philosophy is simple: we treat our soil with the same respect we show our neighbors. Botho — the essence of being human — guide every seed we plant and every hand that harvests.
+                            </p>
+<p>
+                                Founded in the heart of Botswana, we've transformed ancestral wisdom into modern sustainable practices. Our mission is to provide peace (Kagiso) to your home through food that is safe, pure, and honestly grown.
+                            </p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-8">
+<div>
+<p class="text-h2 font-h2 text-primary">15+</p>
+<p class="text-label-sm text-tertiary">Local Varieties</p>
+</div>
+<div>
+<p class="text-h2 font-h2 text-primary">100%</p>
+<p class="text-label-sm text-tertiary">Community Owned</p>
+</div>
+</div>
+<button class="mt-12 text-on-surface font-label-bold flex items-center gap-3 border-b-2 border-primary-fixed-dim pb-2 hover:border-primary transition-all">
+                            Learn More About Our Journey <span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="max-w-7xl mx-auto px-6 py-xl">
+<div class="bg-primary rounded-3xl p-12 md:p-20 relative overflow-hidden text-center flex flex-col items-center">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<img alt="Texture" class="w-full h-full object-cover" data-alt="Close-up texture of dark green organic leaves pattern, high contrast, moody botanical style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy5QHjprkjrmr_KQRL_pC9litITNFo_p1cW24Wl-xcrxIgF5YfW2nMNgnZIz7uNWhmUohL-xXFv0BN-wmXOwtJqkPQxE-whVmWXq4SGLm5-9xJH1bkl5wqa6DWIQDBnJymLWzuGRBSYx-G6wnk1NSPjzTZYqMWexpYW36ZaU3rxWd7hLInzriJlxCLUmrZWhpGPjj3UKMEuZK90oO_OgoxmI5fooo9gspobsGRmNrzNQfe7gke_HDuZDOpOqDQSC3kQWDQz1hz1jg"/>
+</div>
+<h2 class="font-h1 text-white mb-6 relative z-10">Join Our Farm Table</h2>
+<p class="text-primary-fixed text-body-lg mb-10 max-w-2xl relative z-10">
+                    Get weekly updates on what's fresh, exclusive recipes, and news from the fields.
+                </p>
+<form class="w-full max-w-md flex flex-col sm:flex-row gap-4 relative z-10">
+<input class="flex-grow px-6 py-4 rounded-xl border-none bg-white/10 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 outline-none transition-all" placeholder="Enter your email" type="email"/>
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-label-bold hover:bg-on-primary-container transition-colors shadow-lg">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-50 border-t border-stone-200 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-lg font-bold text-green-800 mb-2">Mercy Door Farms</span>
+<p class="text-stone-500 text-center md:text-left max-w-xs">© 2024 Mercy Door Farms. Rooted in Botho &amp; Kagiso. Bringing nature's best to your doorstep.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-stone-800 hover:underline decoration-green-700 underline-offset-4" href="#">Home</a>
+<a class="text-stone-500 hover:text-stone-800 hover:underline decoration-green-700 underline-offset-4" href="#">Shop</a>
+<a class="text-stone-500 hover:text-stone-800 hover:underline decoration-green-700 underline-offset-4" href="#">About Us</a>
+<a class="text-stone-500 hover:text-stone-800 hover:underline decoration-green-700 underline-offset-4" href="#">Contact</a>
+<a class="text-stone-500 hover:text-stone-800 hover:underline decoration-green-700 underline-offset-4" href="#">Privacy Policy</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-stone-200 text-stone-600 hover:bg-green-700 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-stone-200 text-stone-600 hover:bg-green-700 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- FAB for Shop -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+<span class="font-label-bold pr-2">Shop Now</span>
+</button>
+</div>
+</body></html>
