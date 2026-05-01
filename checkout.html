@@ -3,6 +3,8 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Secure checkout - Mercy Door Farms"/>
+<meta name="author" content="Mercy Door Farms"/>
 <title>Checkout | Mercy Door Farms</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -120,25 +122,25 @@
 <span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="agriculture">agriculture</span>
 <h1 class="text-xl font-extrabold tracking-tight text-green-800 dark:text-green-400">Mercy Door Farms</h1>
 </div>
+<a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.width='auto';this.style.height='auto';" class="bg-primary text-white px-4 py-2 rounded z-50" id="skip-nav">Skip to main content</a>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all text-label-bold font-body-lg" href="#">Home</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all text-label-bold font-body-lg" href="#">Shop</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all text-label-bold font-body-lg" href="#">About Us</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-green-700 dark:hover:text-green-400 transition-all text-label-bold font-body-lg" href="#">Contact</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="index.html">Home</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="shop.html">Shop</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="about.html">About Us</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="p-2 hover:bg-stone-50 dark:hover:bg-zinc-900 rounded-lg transition-colors">
-<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="shopping_cart">shopping_cart</span>
-</button>
+<a href="cart.html" class="p-2 hover:bg-stone-50 rounded-lg transition-colors text-green-700 relative block"><span class="material-symbols-outlined">shopping_cart</span></a>
 </div>
 </div>
 </header>
-<main class="max-w-7xl mx-auto px-margin-mobile md:px-gutter py-xl">
+<nav aria-label="breadcrumb" style="padding:12px 24px;background:#fdf1ed;border-bottom:1px solid #f7ebe7;font-size:13px;font-family:Work Sans,sans-serif;"><a href="index.html" style="color:#0d631b;text-decoration:none;">Home</a> <span style="color:#707a6c;margin:0 6px;">›</span> <a href="shop.html" style="color:#0d631b;text-decoration:none;">Shop</a> <span style="color:#707a6c;margin:0 6px;">›</span> <a href="cart.html" style="color:#0d631b;text-decoration:none;">Cart</a> <span style="color:#707a6c;margin:0 6px;">›</span> <span style="color:#40493d;font-weight:600;">Checkout</span></nav>
+<main id="main-content" class="max-w-7xl mx-auto px-margin-mobile md:px-gutter py-xl">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
 <!-- Checkout Form Section -->
 <div class="lg:col-span-7">
 <div class="flex items-center gap-4 mb-lg">
-<a class="flex items-center gap-2 text-tertiary hover:text-primary transition-colors" href="#">
+<a class="flex items-center gap-2 text-tertiary hover:text-primary transition-colors" href="shop.html">
 <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
 <span class="font-label-bold">Back to Shop</span>
 </a>
@@ -249,8 +251,7 @@
 </div>
 </div>
 <!-- Place Order Button -->
-<button class="w-full mt-lg bg-primary hover:bg-surface-tint text-on-primary py-4 rounded-xl font-h3 transition-all transform active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
-<span>Place Order</span>
+<button onclick="alert('Thank you! Your order has been placed. We will contact you shortly.')" class="w-full mt-lg bg-primary hover:bg-surface-tint text-on-primary py-4 rounded-xl font-h3 transition-all transform active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20"><span>Place Order</span>
 <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </button>
 <p class="text-center text-label-sm text-outline mt-gutter flex items-center justify-center gap-2">
@@ -278,10 +279,10 @@
 <p class="text-stone-800 dark:text-stone-200 text-center md:text-left">© 2024 Mercy Door Farms. Rooted in Botho &amp; Kagiso.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:underline decoration-green-700 underline-offset-4" href="#">Home</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:underline decoration-green-700 underline-offset-4" href="#">Shop</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:underline decoration-green-700 underline-offset-4" href="#">About Us</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:underline decoration-green-700 underline-offset-4" href="#">Contact</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="index.html">Home</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="shop.html">Shop</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="about.html">About Us</a>
+<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="contact.html">Contact</a>
 <a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:underline decoration-green-700 underline-offset-4" href="#">Privacy Policy</a>
 </div>
 </div>
