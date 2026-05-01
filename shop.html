@@ -116,33 +116,35 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
 <body class="bg-background font-body-md text-on-background antialiased">
 <!-- TopAppBar -->
-<header class="sticky top-0 w-full z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-stone-100 dark:border-zinc-800 shadow-sm dark:shadow-none">
-<div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="agriculture">agriculture</span>
-<h1 class="text-xl font-extrabold tracking-tight text-green-800 dark:text-green-400 font-['Plus_Jakarta_Sans']">Mercy Door Farms</h1>
-</div>
-<a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.width='auto';this.style.height='auto';" class="bg-primary text-white px-4 py-2 rounded z-50" id="skip-nav">Skip to main content</a>
-<nav class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans']">
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="index.html">Home</a>
-<a class="text-green-700 font-bold border-b-2 border-green-700 pb-1 font-body-md" href="shop.html">Shop</a>
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="about.html">About Us</a>
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="contact.html">Contact</a>
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background:#fff;border-bottom:2px solid #e8f5e9;">
+  <div class="container-xl">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-success" href="index.html" style="font-family:'Plus Jakarta Sans',sans-serif;">
+      <i class="bi bi-tree-fill fs-4"></i> Mercy Door Farms
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active fw-bold" aria-current="page" href="shop.html">Shop</a></li>
+<li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+
+      </ul>
+      <a href="cart.html" class="btn btn-success rounded-pill px-4 ">
+        <i class="bi bi-cart3 me-1"></i> Cart
+      </a>
+    </div>
+  </div>
 </nav>
-<div class="flex items-center gap-4">
-<button class="p-2 hover:bg-stone-50 dark:hover:bg-zinc-900 rounded-lg transition-colors relative">
-<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="shopping_cart">shopping_cart</span>
-<span class="absolute top-1 right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
-</button>
-<button class="md:hidden p-2">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</div>
-</div>
-</header>
 <nav aria-label="breadcrumb" style="padding:12px 24px;background:#fdf1ed;border-bottom:1px solid #f7ebe7;font-size:13px;font-family:Work Sans,sans-serif;"><a href="index.html" style="color:#0d631b;text-decoration:none;">Home</a> <span style="color:#707a6c;margin:0 6px;">›</span> <span style="color:#40493d;font-weight:600;">Shop</span></nav>
 <main id="main-content" class="max-w-7xl mx-auto px-6 pt-12">
 <!-- Hero / Header Section -->
@@ -344,27 +346,51 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full mt-20 bg-stone-50 dark:bg-zinc-900 border-t border-stone-200 dark:border-zinc-800">
-<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col items-center md:items-start gap-4">
-<h3 class="text-lg font-bold text-green-800 dark:text-green-500 font-['Plus_Jakarta_Sans']">Mercy Door Farms</h3>
-<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-stone-500 dark:text-stone-400">© 2024 Mercy Door Farms. Rooted in Botho &amp; Kagiso.</p>
-</div>
-<nav class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="index.html">Home</a>
-<a class="text-green-700 font-bold border-b-2 border-green-700 pb-1 font-body-md" href="shop.html">Shop</a>
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="about.html">About Us</a>
-<a class="text-stone-600 hover:text-green-700 transition-all font-body-md" href="contact.html">Contact</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 underline decoration-green-700 underline-offset-4" href="#">Privacy Policy</a>
-</nav>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="language">language</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="chat">chat</span>
-</a>
-</div>
-</div>
+<footer class="mt-5 py-5" style="background:#1a6b1a;color:rgba(255,255,255,0.85);">
+  <div class="container-xl">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold text-white mb-3"><i class="bi bi-tree-fill me-2"></i>Mercy Door Farms</h5>
+        <p style="font-size:0.9rem;">Nurturing communities through fresh, sustainable produce. Rooted in Botho &amp; Kagiso.</p>
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-bold text-white mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none" style="color:rgba(255,255,255,0.7);">Home</a></li>
+          <li class="mb-2"><a href="shop.html" class="text-decoration-none" style="color:rgba(255,255,255,0.7);">Shop</a></li>
+          <li class="mb-2"><a href="about.html" class="text-decoration-none" style="color:rgba(255,255,255,0.7);">About Us</a></li>
+          <li class="mb-2"><a href="contact.html" class="text-decoration-none" style="color:rgba(255,255,255,0.7);">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold text-white mb-3">Products</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2" style="color:rgba(255,255,255,0.7);">🫑 Green Bell Peppers — P 15/kg</li>
+          <li class="mb-2" style="color:rgba(255,255,255,0.7);">🎃 Butternut Squash — P 12/pc</li>
+          <li class="mb-2" style="color:rgba(255,255,255,0.7);">🍅 Tomatoes — P 18/kg</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold text-white mb-3">Contact Us</h6>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">
+          <i class="bi bi-geo-alt me-2"></i>Oodi Village, Kgatleng, Botswana<br>
+          <i class="bi bi-telephone me-2"></i>+267 71 234 567<br>
+          <i class="bi bi-envelope me-2"></i>hello@mercydoor.co.bw
+        </p>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,0.2);margin-top:2rem;">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <p class="mb-0" style="font-size:0.85rem;color:rgba(255,255,255,0.5);">© 2025 Mercy Door Farms. Proudly Motswana. Grown with Botho.</p>
+      <div class="d-flex gap-3">
+        <i class="bi bi-facebook fs-5 cursor-pointer" style="color:rgba(255,255,255,0.6);"></i>
+        <i class="bi bi-instagram fs-5 cursor-pointer" style="color:rgba(255,255,255,0.6);"></i>
+        <i class="bi bi-whatsapp fs-5 cursor-pointer" style="color:rgba(255,255,255,0.6);"></i>
+      </div>
+    </div>
+  </div>
 </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>
