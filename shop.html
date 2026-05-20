@@ -138,13 +138,13 @@
 <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
 <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
 
-      </ul>
-      <a href="cart.html" class="btn btn-success rounded-pill px-4 ">
+    </ul>
+      <a href="cart.html" class="btn btn-success rounded-pill px-4">
         <i class="bi bi-cart3 me-1"></i> Cart
       </a>
     </div>
   </div>
-</nav>
+</nav>  
 <nav aria-label="breadcrumb" style="padding:12px 24px;background:#fdf1ed;border-bottom:1px solid #f7ebe7;font-size:13px;font-family:Work Sans,sans-serif;"><a href="index.html" style="color:#0d631b;text-decoration:none;">Home</a> <span style="color:#707a6c;margin:0 6px;">›</span> <span style="color:#40493d;font-weight:600;">Shop</span></nav>
 <main id="main-content" class="max-w-7xl mx-auto px-6 pt-12">
 <!-- Hero / Header Section -->
@@ -389,8 +389,51 @@
       </div>
     </div>
   </div>
-</footer>
+</footer><script>
+  // Add to Cart function
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + ' added to cart!');
+  }
+
+  // Attach to each button
+  document.querySelectorAll('button').forEach(btn => {
+    const text = btn.textContent.trim();
+    if (text === 'Add to Cart' || text === 'Quick Add') {
+      const card = btn.closest('[class*="rounded"]');
+      const name = card?.querySelector('h3, h4')?.textContent.trim() || 'Product';
+      const priceText = card?.querySelector('[class*="text-primary"]')?.textContent.trim() || 'P0';
+      const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+      btn.addEventListener('click', () => addToCart(name, price));
+    }
+  });
+</script>
 
   <!-- Bootstrap 5 JS -->
+  <script>
+  document.querySelectorAll('button').forEach(btn => {
+    if (btn.textContent.includes('Add to Cart')) {
+      btn.addEventListener('click', () => {
+        const cart = JSON.parse(localStorage.getItem('mercyCart') || '[]');
+        const card = btn.closest('.group');
+        const name = card?.querySelector('h3')?.textContent.trim() || 'Product';
+        const price = parseFloat(card?.querySelector('.text-primary')?.textContent.replace(/[^\d.]/g,'')) || 0;
+        const qty = parseInt(card?.querySelector('.px-4')?.textContent) || 1;
+        const found = cart.find(i => i.name === name);
+        if (found) { found.qty += qty; } else { cart.push({name, price, qty}); }
+        localStorage.setItem('mercyCart', JSON.stringify(cart));
+        alert(name + ' x' + qty + ' added to cart!');
+        window.location.href = 'cart.html';
+      });
+    }
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>

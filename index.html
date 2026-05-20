@@ -138,8 +138,8 @@
 <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
 
       </ul>
-      <a href="cart.html" class="btn btn-success rounded-pill px-4 ">
-        <i class="bi bi-cart3 me-1"></i> Cart
+      <a href="cart.html" class="btn btn-success rounded-pill px-4">
+       <i class="bi bi-cart3 me-1"></i> Cart
       </a>
     </div>
   </div>
@@ -193,7 +193,10 @@
 </div>
 <h3 class="font-h3 text-h3 mb-2">Organic Heirloom Tomatoes</h3>
 <p class="text-on-surface-variant text-body-md mb-6">Sun-ripened in our northern fields, bursting with flavor and rich in antioxidants.</p>
-<button class="bg-primary text-white px-6 py-3 rounded-lg font-label-bold flex items-center gap-2">
+<a href="shop.html" class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 active:scale-95 transition-transform">
+  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+  <span class="font-label-bold pr-2">Shop Now</span>
+</a>
 <span class="material-symbols-outlined">add_shopping_cart</span> Add to Cart
                         </button>
 </div>
@@ -336,6 +339,32 @@
     </div>
   </div>
 </footer>
+<script>
+  // Add to Cart function
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + ' added to cart!');
+  }
+
+  // Attach to each button
+  document.querySelectorAll('button').forEach(btn => {
+    const text = btn.textContent.trim();
+    if (text === 'Add to Cart' || text === 'Quick Add') {
+      const card = btn.closest('[class*="rounded"]');
+      const name = card?.querySelector('h3, h4')?.textContent.trim() || 'Product';
+      const priceText = card?.querySelector('[class*="text-primary"]')?.textContent.trim() || 'P0';
+      const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+      btn.addEventListener('click', () => addToCart(name, price));
+    }
+  });
+</script>
 <!-- FAB for Shop -->
 <div class="fixed bottom-8 right-8 z-50">
 <button class="bg-primary text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 active:scale-95 transition-transform">
@@ -345,5 +374,36 @@
 </div>
 
   <!-- Bootstrap 5 JS -->
+   <script>
+  function getCart() { return JSON.parse(localStorage.getItem('mercyCart') || '[]'); }
+  function saveCart(c) { localStorage.setItem('mercyCart', JSON.stringify(c)); }
+
+  function addToCart(name, price) {
+    const cart = getCart();
+    const found = cart.find(i => i.name === name);
+    if (found) { found.qty++; } else { cart.push({name, price, qty:1}); }
+    saveCart(cart);
+    alert(name + ' added to cart!');
+  }
+
+  document.querySelectorAll('button').forEach(btn => {
+    if (btn.textContent.includes('Add to Cart') || btn.textContent.includes('Quick Add')) {
+      const card = btn.closest('[class*="rounded"]');
+      const name = card?.querySelector('h3,h4')?.textContent.trim() || 'Product';
+      const price = parseFloat(card?.querySelector('[class*="text-primary"]')?.textContent.replace(/[^\d.]/g,'')) || 0;
+      btn.addEventListener('click', () => addToCart(name, price));
+    }
+  });
+
+  document.querySelector('form')?.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thanks for subscribing!');
+    e.target.reset();
+  });
+
+  document.querySelector('.fixed.bottom-8 button')?.addEventListener('click', () => {
+    window.location.href = 'shop.html';
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>

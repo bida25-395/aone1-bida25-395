@@ -350,8 +350,60 @@
       </div>
     </div>
   </div>
-</footer>
+</footer><script>
+  document.querySelectorAll('button').forEach(btn => {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (!icon) return;
+
+    if (icon.textContent.trim() === 'add') {
+      btn.addEventListener('click', () => {
+        const qtySpan = btn.previousElementSibling;
+        qtySpan.textContent = parseInt(qtySpan.textContent) + 1;
+      });
+    }
+
+    if (icon.textContent.trim() === 'remove') {
+      btn.addEventListener('click', () => {
+        const qtySpan = btn.nextElementSibling;
+        let qty = parseInt(qtySpan.textContent);
+        if (qty > 1) qtySpan.textContent = qty - 1;
+      });
+    }
+
+    if (icon.textContent.trim() === 'delete') {
+      btn.addEventListener('click', () => {
+        btn.closest('[class*="rounded-xl"]').remove();
+      });
+    }
+  });
+</script>
 
   <!-- Bootstrap 5 JS -->
+   <script>
+  function getCart() { return JSON.parse(localStorage.getItem('mercyCart') || '[]'); }
+  function saveCart(c) { localStorage.setItem('mercyCart', JSON.stringify(c)); }
+
+  document.querySelectorAll('.grid > div').forEach(card => {
+    const name = card.querySelector('h3')?.textContent.trim() || 'Product';
+    const price = parseFloat(card.querySelector('.text-primary')?.textContent.replace(/[^\d.]/g,'')) || 0;
+    const qtySpan = card.querySelector('span.px-4');
+
+    card.querySelectorAll('button').forEach(btn => {
+      const icon = btn.querySelector('.material-symbols-outlined')?.textContent.trim();
+      if (icon === 'add') btn.addEventListener('click', () => { qtySpan.textContent = parseInt(qtySpan.textContent) + 1; });
+      if (icon === 'remove') btn.addEventListener('click', () => { if (parseInt(qtySpan.textContent) > 1) qtySpan.textContent = parseInt(qtySpan.textContent) - 1; });
+      if (btn.textContent.includes('Add to Cart')) {
+        btn.addEventListener('click', () => {
+          const cart = getCart();
+          const qty = parseInt(qtySpan.textContent);
+          const found = cart.find(i => i.name === name);
+          if (found) { found.qty += qty; } else { cart.push({name, price, qty}); }
+          saveCart(cart);
+          alert(name + ' x' + qty + ' added to cart!');
+        });
+      }
+    });
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>
