@@ -434,6 +434,32 @@
       });
     }
   });
+</script><script>
+  function getCart() { return JSON.parse(localStorage.getItem('mercyCart') || '[]'); }
+  function saveCart(c) { localStorage.setItem('mercyCart', JSON.stringify(c)); }
+
+  document.querySelectorAll('.group').forEach(card => {
+    const name  = card.querySelector('h3')?.textContent.trim() || 'Product';
+    const price = parseFloat(card.querySelector('.text-primary')?.textContent.replace(/[^\d.]/g,'')) || 0;
+    const qtySpan = card.querySelector('.px-4');
+
+    card.querySelectorAll('button').forEach(btn => {
+      const icon = btn.querySelector('.material-symbols-outlined')?.textContent.trim();
+      if (icon === 'add') btn.addEventListener('click', () => { qtySpan.textContent = parseInt(qtySpan.textContent) + 1; });
+      if (icon === 'remove') btn.addEventListener('click', () => { if (parseInt(qtySpan.textContent) > 1) qtySpan.textContent = parseInt(qtySpan.textContent) - 1; });
+      if (btn.textContent.includes('Add to Cart')) {
+        btn.addEventListener('click', () => {
+          const qty = parseInt(qtySpan.textContent) || 1;
+          const cart = getCart();
+          const found = cart.find(i => i.name === name);
+          if (found) { found.qty += qty; } else { cart.push({ name, price, qty }); }
+          saveCart(cart);
+          alert(name + ' x' + qty + ' added to cart!');
+          window.location.href = 'cart.html';
+        });
+      }
+    });
+  });
 </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body></html>
