@@ -385,8 +385,8 @@
 
   document.querySelectorAll('.grid > div').forEach(card => {
     const name = card.querySelector('h3')?.textContent.trim() || 'Product';
-    const price = parseFloat(card.querySelector('.text-primary')?.textContent.replace(/[^\d.]/g,'
-    const qtySpan = card.querySelector('[data-role="qty"]');
+    const price = parseFloat(card.querySelector('.text-primary')?.textContent.replace(/[^\d.]/g, '')) || 0;
+    const  qtySpan = card.querySelector('[data-role="qty"]');
 
     card.querySelectorAll('button').forEach(btn => {
       const icon = btn.querySelector('.material-symbols-outlined')?.textContent.trim();
